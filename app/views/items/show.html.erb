@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @item.name %>
+</p>
+
+<p>
+  <b>Votes:</b>
+  <%= @item.votes %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @item.location %>
+</p>
+<p>
+	<b><%= image_tag @item.picture.url %></b>
+</p>
+<p>
+	<%= button_to "Vote", :action => "vote", :id => @item.id, %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
