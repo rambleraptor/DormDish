@@ -1,5 +1,5 @@
 class Item < ActiveRecord::Base
-  has_attached_file :picture, :styles => {}
+  has_attached_file :picture, :styles => {:medium => "300x300"}
   validates_attachment_content_type :picture, :content_type => ['image/jpeg', 'image/png']
   validates_attachment_size :picture, :less_than => 7.megabytes
   validates_attachment_presence :picture

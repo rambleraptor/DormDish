@@ -6,9 +6,23 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-
+<div class="container">
+	<header>
+	 <%= image_tag("logo.png", :alt => "dormdish", ) %>
+	</header>
+<section>
 <%= yield %>
-
+</section>
+<div id="bottomsidebar">
+<div id="links">
+	<%= link_to 'Add Food', new_item_path, %>
+	<a href="#">About</a>
+	<a href="#">Blog</a>
+	<a href="mailto:alex@dormdish.com">Contact</a>
+</div>
+</div>
+</div>
 </body>
 </html>

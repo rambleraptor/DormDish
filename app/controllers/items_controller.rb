@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
-  
+  http_basic_authenticate_with :name => "astephen2", :password => "100892Steph", :only => [:edit , :index , :show] 
   def compare 
     @items = Item.random(2)
   end
@@ -53,10 +53,11 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(params[:item])
+    @item.votes = 0
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to @item, notice: 'Item was successfully created.' }
+        format.html { redirect_to items_compare_path, notice: 'Item was successfully created.' }
         format.json { render json: @item, status: :created, location: @item }
       else
         format.html { render action: "new" }

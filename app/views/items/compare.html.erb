@@ -1,15 +1,17 @@
+<% loopcount = 1 %>
+<div class="content">
 <% @items.each do |item| %>
-	<div class="items">
-		<%= image_tag item.picture.url %> <br />
-		<h1><%= item.location %></h1>
+	<div class="item<%= loopcount %>">
+		<% loopcount = loopcount +1%>
+		<%= image_tag item.picture.url(:medium), :class => "iteminfo" %> <blockquote></blockquote>
+		<h2 class = "iteminfotext"><%= item.votes %></h2>
+		<h1 class = "iteminfotext"><%= item.location %></h1>
 		
-		<h2><%= pluralize(item.votes, "Item") %></h2>
 		
-		<%= button_to "Vote", :action => "vote", :id => item.id, %>
-	<div class = "breaker">
-	</div>	
+		
+		<div class="iteminfotext"><%= button_to "Vote", :action => "vote", :id => item.id, %></div>
+		<blockquote></blockquote>
 	</div>
-
+</div>
 <% end %>
-	<%=link_to 'Add Food', new_item_path %>
 	<% yield %>
