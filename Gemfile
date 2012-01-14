@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.3'
 gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
+gem 'randumb'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'

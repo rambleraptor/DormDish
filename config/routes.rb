@@ -1,9 +1,16 @@
 Food::Application.routes.draw do
+   match "/items/compare" => "items#compare"
+   match "/items/vote" => "items#vote"
   resources :items do
     member do
       post 'vote'
     end
   end
+
+ 
+  
+  
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

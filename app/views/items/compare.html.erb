@@ -1,0 +1,15 @@
+<% @items.each do |item| %>
+	<div class="items">
+		<%= image_tag item.picture.url %> <br />
+		<h1><%= item.location %></h1>
+		
+		<h2><%= pluralize(item.votes, "Item") %></h2>
+		
+		<%= button_to "Vote", :action => "vote", :id => item.id, %>
+	<div class = "breaker">
+	</div>	
+	</div>
+
+<% end %>
+	<%=link_to 'Add Food', new_item_path %>
+	<% yield %>

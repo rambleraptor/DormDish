@@ -2,11 +2,15 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   
+  def compare 
+    @items = Item.random(2)
+  end
+  
   def vote
     @item = Item.find(params[:id])
     @item.increment(:votes)
     @item.save
-    redirect_to(@item)
+    redirect_to items_compare_path
   end
   
   def index
