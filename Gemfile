@@ -7,6 +7,7 @@ gem 'randumb'
 gem 'aws-sdk'
 gem 'pg'
 gem 'heroku'
+gem 'thin'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
