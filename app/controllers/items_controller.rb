@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
-  http_basic_authenticate_with :name => "astephen2", :password => "100892Steph", :only => [:edit , :index , :show] 
+  http_basic_authenticate_with :name => "dormdishadmin", :password => "mariokart", :only => [:edit , :index , :show] 
   def compare 
     @items = Item.random(2)
   end
