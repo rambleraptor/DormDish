@@ -1,4 +1,4 @@
-Food::Application.routes.draw do
+App::Application.routes.draw do
    match "/items/compare" => "items#compare"
    match "/items/vote" => "items#vote"
    match "/items/about" => "items#about"

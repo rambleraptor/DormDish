@@ -4,10 +4,9 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  adapter: postgresql
-  username: alex@dormdish.com
-  password: 100892Steph
-  database: DormDish_development
+  adapter: sqlite3
+  database: db/development.sqlite3
+  timeout: 5000
 
 test:
   adapter: sqlite3
